@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="myscript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-dark p-4">
+                <h4 class="text-white">Book Liblary</h4>
+                <span class="text-muted">As I stared at the bookshelf, I realized my life was like a novel - full of plot twists, bizarre characters, and occasional grammatical errors.</span>
+              </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+        </div>
+    </div>
+    <!-- <button onclick="openForm()">Add New Book</button> -->
+    <button class="button-1" onclick="openForm()"> <img src="images/plus.svg" alt=""></button>
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h2>Add New Book</h2>
+
+    <label for="author"><b>Author:</b></label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="title"><b>Title:</b></label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="pages"><b>Number of Pages:</b></label>
+    <input type="number" id="pages" name="pages" required>
+
+    <label for="read"><b>Have you read it?</b></label>
+    <input type="checkbox" id="read" name="read">
+
+    <label for="comments"><b>Additional Comments:</b></label>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+    <button onclick="addBookToLibrary()" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+
+  <div id="books-container"></div>
+</div>
+
+
+</body>
+</html>
